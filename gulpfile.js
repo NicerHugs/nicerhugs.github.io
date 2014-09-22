@@ -119,8 +119,8 @@ gulp.task('deploy', function() {
         message: 'This will deploy to GitHub Pages. Have you already built your application and pushed your updated master branch?'
     }, function(res){
       if (res.task){
-        console.log('Attempting: "git subtree push --prefix dist origin gh-pages"');
-        exec('git subtree push --prefix dist origin gh-pages', function(err, stdout, stderr) {
+        console.log('Attempting: "git subtree push --prefix dist origin master"');
+        exec('git subtree push --prefix dist origin master', function(err, stdout, stderr) {
             console.log(stdout);
             console.log(stderr);
         });

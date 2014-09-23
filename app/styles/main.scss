@@ -1,4 +1,5 @@
 @import '../../bower_components/bourbon/dist/bourbon';
+$visual-grid: true;
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic);
@@ -69,63 +70,104 @@ main {
   margin: 0 auto;
   max-width: rem(1080);
   overflow: auto;
+  width: 90%;
 
-  h1 {
-    color: darken($primary-color, 20%);
-    font-size: 2.25rem;
-    letter-spacing: .1rem;
-    margin: 3rem 2rem 0;
-    text-align: center;
-  }
+  .description {
 
-  p {
-    font-family: $cardo;
-    font-size: 1.2rem;
-    font-style: italic;
-    margin: 1rem 1.67rem 1.67rem;
-    text-align: center;
-  }
-
-
-  li {
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 1.67rem 5% 0;
-    max-width: rem(640);
-    object-fit: cover;
-    overflow: hidden;
-    position: relative;
-    width: 90%;
-
-    &:hover img {
-      @include transform(scale(1.1, 1.1));
+    h1 {
+      color: darken($primary-color, 20%);
+      font-size: 2.25rem;
+      letter-spacing: .1rem;
+      margin: 3rem 2rem 0;
+      text-align: center;
     }
 
-    &::after {
-      border: solid 1px #fff;
-      content: '';
+    p {
+      font-family: $cardo;
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 1.67rem 1.67rem 2.79rem;
+      text-align: center;
+    }
+  }
+
+  figure {
+    color: #fff;
+    margin: 0 0 1.67em;
+    max-width: 640px;
+    overflow:hidden;
+    position: relative;
+    width: 100%;
+
+    figcaption {
+      background: rgba($primary-color, .8);
       position: absolute;
       top: 0;
-      bottom: 0;
       left: 0;
-      right: 0;
-      transition-duration: .4s;
+      height: 100%;
+      opacity: 0;
+      padding: 15%;
+      transition-duration: .5s;
+      width: 100%;
+      z-index: 100;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transition-duration: .3s;
+        width: 100%;
+      }
     }
 
-    &:hover::after {
-      border-radius: 2px;
-      top: 15%;
-      bottom: 15%;
-      left: 10%;
-      right: 10%;
+    &:hover figcaption {
+      opacity: 1;
 
+      &::before {
+        border: solid 1px lighten($primary-color, 20%);
+        top: 10%;
+        left: 7%;
+        height: 80%;
+        width: 86%;
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+
+      span{
+        font-family: $lato;
+        font-weight: 400;
+        line-height: rem(33);
+      }
+    }
+
+    p {
+      font-family: $lato;
+      font-size: 1.1em;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      opacity: 0;
+      width: 100%;
+      z-index: 5;
     }
 
     img {
+      border: solid 1px lighten($primary-color, 20%);
       object-fit: cover;
       transition-duration: .5s;
       width: 100%;
+    }
 
+    &:hover img {
+      transform: scale(1.05, 1.05);
     }
   }
 }
@@ -138,5 +180,23 @@ main {
 footer {
   border-top: solid 1px;
   height: 5rem;
-  margin-top: 1.67rem;
+}
+
+
+// =============================================================================
+                                  // media queries
+// =============================================================================
+
+@media screen and (min-width: 700px) {
+  main {
+    figure {
+      margin-right: 5%;
+      width: 47%;
+      float: left;
+
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+    }
+  }
 }

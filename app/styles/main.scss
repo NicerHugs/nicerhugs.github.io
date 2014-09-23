@@ -1,34 +1,41 @@
-
-
-// =============================================================================
-                            // Neat settings
-// =============================================================================
-
-$visual-grid: true;
-
-$mobile: new-breakpoint(max-width 480px 4);
-
-
-// =============================================================================
-                                // Imports
-// =============================================================================
-
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,900,100italic);
 
+// =============================================================================
+                            // SCSS variables
+// =============================================================================
 
+//Colors
+$primary-color: #819785;
+$border-color: lighten($primary-color, 40%);
 
+//Fonts
+$open-sans: 'Open Sans', $helvetica;
+$cardo: 'Cardo', $georgia;
+$lato: 'Lato', $lucida-grande;
 
 // =============================================================================
                             // Global styles
 // =============================================================================
 
-body {
+.container {
+  color: $primary-color;
+  font-family: $open-sans;
   font-size: 100%;
 }
 
-.container {
-  @include outer-container;
+ul {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+* {
+  vertical-align: top;
 }
 
 
@@ -37,8 +44,20 @@ body {
 // =============================================================================
 
 header {
-  border-bottom: solid 1px;
+  border-bottom: solid 1px $border-color;
+  color: lighten($primary-color, 20%);
   height: 5rem;
+  padding: 1.67rem 5%;
+
+  h2 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  nav {
+    display: inline-block;
+    float: right;
+  }
 }
 
 
@@ -46,7 +65,70 @@ header {
                                     // Body
 // =============================================================================
 
+main {
+  margin: 0 auto;
+  max-width: rem(1080);
+  overflow: auto;
 
+  h1 {
+    color: darken($primary-color, 20%);
+    font-size: 2.25rem;
+    letter-spacing: .1rem;
+    margin: 3rem 2rem 0;
+    text-align: center;
+  }
+
+  p {
+    font-family: $cardo;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 1rem 1.67rem 1.67rem;
+    text-align: center;
+  }
+
+
+  li {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 1.67rem 5% 0;
+    max-width: rem(640);
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+
+    &:hover img {
+      @include transform(scale(1.1, 1.1));
+    }
+
+    &::after {
+      border: solid 1px #fff;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition-duration: .4s;
+    }
+
+    &:hover::after {
+      border-radius: 2px;
+      top: 15%;
+      bottom: 15%;
+      left: 10%;
+      right: 10%;
+
+    }
+
+    img {
+      object-fit: cover;
+      transition-duration: .5s;
+      width: 100%;
+
+    }
+  }
+}
 
 
 // =============================================================================
@@ -56,4 +138,5 @@ header {
 footer {
   border-top: solid 1px;
   height: 5rem;
+  margin-top: 1.67rem;
 }

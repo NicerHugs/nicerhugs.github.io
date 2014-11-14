@@ -15,10 +15,11 @@ header {
 }
 
 .colors {
-  width: 600px;
-  margin: 50px auto;
   border: solid 1px  #121A24;
+  margin: 50px auto;
+  width: 600px;
 }
+
 .color {
   width: 100px;
   float: left;

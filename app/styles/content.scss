@@ -1,0 +1,11 @@
+@import 'work-example';
+@import 'image-dividers';
+
+.sans {
+  @include sans;
+}
+
+.section-title {
+  font-weight: 100;
+  margin: 0 0 rem(40) rem(40);
+}

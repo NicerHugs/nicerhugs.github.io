@@ -1,0 +1,45 @@
+@import 'colors';
+@import 'fonts';
+
+html,
+body,
+.container {
+  @include sans;
+  color: $dark;
+  font-size: 16px;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+
+img {
+  width: 50px;
+}
+
+h1 {
+  @include heading;
+  font-size: 4rem;
+}
+
+h2 {
+  @include heading;
+  font-size: 3rem;
+}
+
+h3 {
+  @include heading;
+  font-size: 2rem;
+}
+
+p {
+  line-height: rem(20);
+  margin: 0;
+}

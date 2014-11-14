@@ -1,0 +1,13 @@
+header {
+  background: url('../images/header.JPG');
+  background-size: cover;
+  height: 100%;
+
+  h1 {
+    padding-right: rem(20);
+    position: fixed;
+    right: 0;
+    text-align: right;
+    z-index: 101;
+  }
+}

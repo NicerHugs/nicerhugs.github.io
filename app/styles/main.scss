@@ -1,65 +1,9 @@
 @import '../../bower_components/bourbon/dist/bourbon';
-$visual-grid: true;
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
-@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic);
-@import url(http://fonts.googleapis.com/css?family=Lato:100,900,100italic);
-
-// =============================================================================
-                            // SCSS variables
-// =============================================================================
-
-//Colors
-$primary-color: #819785;
-$border-color: lighten($primary-color, 40%);
-
-//Fonts
-$open-sans: 'Open Sans', $helvetica;
-$cardo: 'Cardo', $georgia;
-$lato: 'Lato', $lucida-grande;
-
-// =============================================================================
-                            // Global styles
-// =============================================================================
-
-.container {
-  color: $primary-color;
-  font-family: $open-sans;
-  font-size: 100%;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  overflow: auto;
-  padding: 0;
-}
-
-* {
-  vertical-align: top;
-}
-
-
-// =============================================================================
-                                // Header
-// =============================================================================
-
-header {
-  border-bottom: solid 1px $border-color;
-  color: lighten($primary-color, 20%);
-  height: 5rem;
-  padding: 1.67rem 5%;
-
-  h2 {
-    display: inline-block;
-    margin: 0;
-  }
-
-  nav {
-    display: inline-block;
-    float: right;
-  }
-}
+@import 'global';
+@import 'header';
+@import 'nav';
+@import 'layout';
+@import 'content';
 
 
 // =============================================================================
@@ -75,7 +19,6 @@ main {
   .description {
 
     h1 {
-      color: darken($primary-color, 20%);
       font-size: 2.25rem;
       letter-spacing: .1rem;
       margin: 3rem 2rem 0;
@@ -83,7 +26,7 @@ main {
     }
 
     p {
-      font-family: $cardo;
+      font-family: $serif;
       font-size: 1.2rem;
       font-style: italic;
       margin: 1.67rem 1.67rem 2.79rem;
@@ -100,7 +43,7 @@ main {
     width: 100%;
 
     figcaption {
-      background: rgba($primary-color, .8);
+      // background: rgba($primary-color, .8);
       position: absolute;
       top: 0;
       left: 0;
@@ -126,7 +69,7 @@ main {
       opacity: 1;
 
       &::before {
-        border: solid 1px lighten($primary-color, 20%);
+        // border: solid 1px lighten($primary-color, 20%);
         top: 10%;
         left: 7%;
         height: 80%;
@@ -160,7 +103,7 @@ main {
     }
 
     img {
-      border: solid 1px lighten($primary-color, 20%);
+      // border: solid 1px lighten($primary-color, 20%);
       object-fit: cover;
       transition-duration: .5s;
       width: 100%;

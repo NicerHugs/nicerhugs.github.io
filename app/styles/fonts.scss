@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+
+$serif: 'PT Serif', $georgia;
+$lato: 'Lato', sans-serif;
+
+@mixin sans {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: rem(.4);
+} 
+
+@mixin heading {
+  font-family: $lato;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}

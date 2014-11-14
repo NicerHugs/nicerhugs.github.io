@@ -1,0 +1,43 @@
+$white: #fff;
+$light: #dadee5;
+$blue: #6297a6;
+$green: #a17e37;
+$dark: #121a24;
+$pink: #9f777d;
+
+.colors {
+  width: 600px;
+  margin: 50px auto;
+  overflow: auto;
+}
+
+.color {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+
+.white {
+  background: $white;
+}
+
+.light {
+  background: $light;
+}
+
+.blue {
+  background: $blue;
+}
+
+.green {
+  background: $green;
+}
+
+.pink {
+  background: $pink;
+}
+
+.dark {
+  background: $dark;
+}

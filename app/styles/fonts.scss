@@ -9,11 +9,18 @@ $lato: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1.2rem;
   letter-spacing: rem(.4);
-} 
+}
 
 @mixin heading {
   font-family: $lato;
   font-weight: 100;
   margin: 0;
   padding: 0;
+}
+
+@mixin serif {
+  font-family: $serif;
+  font-weight: 300;
+  font-size: .75rem;
+  letter-spacing: rem(.5);
 }

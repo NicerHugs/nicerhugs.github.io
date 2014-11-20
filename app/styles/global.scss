@@ -20,10 +20,6 @@ ul {
   padding: 0;
 }
 
-img {
-  width: 50px;
-}
-
 h1 {
   @include heading;
   font-size: 4rem;

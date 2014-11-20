@@ -1,3 +1,63 @@
+
 .main-section {
-  padding: rem(50) 0;
+  padding-bottom: rem(40);
+  position: relative;
+}
+
+.style-body {
+  overflow: auto;
+}
+
+.third {
+  box-sizing: border-box;
+  float: left;
+  overflow: auto;
+  padding: rem(40);
+  width: 33%;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+p {
+  margin-top: rem(20);
+}
+
+.image-divider {
+  position: relative;
+}
+
+.image-divider p,
+header p {
+  bottom: 15%;
+  color: $white;
+  font-size: rem(20);
+  font-weight: 100;
+  left: 5%;
+  letter-spacing: rem(1);
+  line-height: rem(24);
+  position: absolute;
+  text-shadow: $dark 0 0 5px;
+  text-transform: uppercase;
+  width: 40%;
+}
+
+.topped {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.bottomed {
+  bottom: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: auto;
+  width: 100%;
+}
+
+.clear-left {
+  clear: left;
 }

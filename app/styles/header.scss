@@ -2,8 +2,10 @@ header {
   background: url('../images/header.JPG');
   background-size: cover;
   height: 100%;
+  position: relative;
 
   h1 {
+    color: $white;
     padding-right: rem(20);
     position: fixed;
     right: 0;

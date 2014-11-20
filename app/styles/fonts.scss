@@ -19,8 +19,8 @@ $lato: 'Lato', sans-serif;
 }
 
 @mixin serif {
-  font-family: $serif;
-  font-weight: 300;
-  font-size: .75rem;
-  letter-spacing: rem(.5);
+  font-family: $lato;
+  font-weight: 100;
+  font-size: .85rem;
+  letter-spacing: rem(.7);
 }

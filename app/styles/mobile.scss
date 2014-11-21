@@ -1,0 +1,101 @@
+@media (max-width: 674px) {
+  html,
+  body,
+  .container {
+    font-size: 10px;
+  }
+
+  header {
+    p {
+      font-weight: 300;
+    }
+  }
+
+  .style-body {
+    h3 {
+      font-weight: 300;
+    }
+  }
+
+  .work-example {
+    p {
+      font-weight: 300;
+    }
+  }
+
+  footer.main-section {
+    .footer-img {
+      margin-top: 2%;
+    }
+  }
+}
+
+@media (max-width: 674px) and (orientation: portrait) {
+  header {
+    height: 250px;
+
+    p {
+      font-size: rem(18);
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding-top: rem(10);
+  }
+
+  h2.section-title {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .style-body {
+    overflow: visible;
+
+    .third {
+      float: none;
+      overflow: visible;
+      width: 100%;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+
+
+
+
+  .work-example {
+    .work-left {
+      width: 100%;
+    }
+  }
+
+  footer.main-section {
+    .footer-img {
+      height: auto;
+      
+      &::after {
+        clear: both;
+        content: '';
+      }
+
+      img {
+        margin: 10% 25%;
+        width: 50%;
+      }
+
+      p {
+        margin: 5% 15%;
+        width: 70%;
+      }
+    }
+
+    h3 {
+      font-weight: 300;
+    }
+  }
+}

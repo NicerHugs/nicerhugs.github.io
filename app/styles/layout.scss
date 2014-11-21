@@ -1,17 +1,23 @@
 
+
+
 .main-section {
   padding-bottom: rem(40);
   position: relative;
 }
 
 .style-body {
-  overflow: auto;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
 }
 
 .third {
   box-sizing: border-box;
   float: left;
-  overflow: auto;
   padding: rem(40);
   width: 33%;
 
@@ -28,15 +34,14 @@ p {
   position: relative;
 }
 
-.image-divider p,
 header p {
-  bottom: 15%;
+  bottom: 12%;
   color: $white;
-  font-size: rem(20);
+  font-size: rem(22);
   font-weight: 100;
   left: 5%;
   letter-spacing: rem(1);
-  line-height: rem(24);
+  line-height: rem(26);
   position: absolute;
   text-shadow: $dark 0 0 5px;
   text-transform: uppercase;

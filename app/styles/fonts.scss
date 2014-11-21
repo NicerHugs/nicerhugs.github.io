@@ -24,3 +24,19 @@ $lato: 'Lato', sans-serif;
   font-size: .85rem;
   letter-spacing: rem(.7);
 }
+
+
+h1 {
+  @include heading;
+  font-size: 4rem;
+}
+
+h2 {
+  @include heading;
+  font-size: 3rem;
+}
+
+h3 {
+  @include heading;
+  font-size: 2rem;
+}
